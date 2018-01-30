@@ -15,4 +15,4 @@
 # so our implementation looks for any missing column entry and
 # replace the entry with a blank space, so the display works.
 #
-sed 's/^\t/ \t/; s/\t$/\t /; s/\t\t/\t \t/g;' "$@" | column -t -s $'\t'
+sed 's/^\t/ \t/; s/\t$/\t /; s/\t\t/\t \t/g; s/\t\t/\t \t/g;' "$@" | column -t -s $'\t'
